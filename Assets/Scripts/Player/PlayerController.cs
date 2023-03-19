@@ -81,6 +81,11 @@ public class PlayerController : MonoBehaviour
         move = move.normalized * origMagnitude;
         rbPlayer.AddForce(move * playerSpeed, ForceMode.Force);
 
+        var lookDirection = cameraTransform.forward;
+        lookDirection.y = 0;
+
+        if (move != Vector3.zero) transform.forward = Vector3.Lerp(transform.forward, lookDirection, 10 * Time.deltaTime);
+
         if (rbPlayer.velocity.sqrMagnitude > maxSpeed)
         {
             //smoothness of the slowdown is controlled by the 0.99f, 
