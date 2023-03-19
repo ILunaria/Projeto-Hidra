@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class CameraControll : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    private Transform cam;
     [SerializeField] private Transform body;
     [SerializeField] private float bodyRotationSpeed;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         MouseHide();
+        cam = Camera.main.transform;
     }
     private void Update()
     {
@@ -25,6 +23,9 @@ public class CameraControll : MonoBehaviour
     }
     private void CheckRotation()
     {
+        var lookDirection = cam.forward;
+        lookDirection.y = 0;
 
+        body.forward = lookDirection;
     }
 }
