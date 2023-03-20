@@ -28,11 +28,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     #endregion
 
+    private Animator anim;
+
     private void Awake()
     {
         inputs = new InputActions();
         rbPlayer = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
+        anim = GetComponent<Animator>();
 
         inputs.Enable();
         inputs.Player.Jump.performed += Jump_Input;
@@ -84,7 +87,12 @@ public class PlayerController : MonoBehaviour
         var lookDirection = cameraTransform.forward;
         lookDirection.y = 0;
 
-        if (move != Vector3.zero) transform.forward = Vector3.Lerp(transform.forward, lookDirection, 10 * Time.deltaTime);
+        if (move != Vector3.zero)
+        {
+            transform.forward = Vector3.Lerp(transform.forward, lookDirection, 10 * Time.deltaTime);
+            anim.SetBool("isWalking", true);
+        }
+        else anim.SetBool("isWalking", false);
 
         if (rbPlayer.velocity.sqrMagnitude > maxSpeed)
         {
