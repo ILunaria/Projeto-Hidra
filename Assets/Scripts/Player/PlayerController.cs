@@ -49,11 +49,13 @@ public class PlayerController : MonoBehaviour
         {
             maxSpeed += sprintAddSpeed;
             playerSpeed += sprintAddSpeed;
+            anim.speed += 1;
         }
         if(obj.canceled)
         {
             maxSpeed-= sprintAddSpeed;
             playerSpeed-= sprintAddSpeed;
+            anim.speed -= 1;
         }
     }
 
@@ -89,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
         if (move != Vector3.zero)
         {
-            transform.forward = Vector3.Lerp(transform.forward, lookDirection, 10 * Time.deltaTime);
+            transform.forward = Vector3.Lerp(transform.forward, lookDirection, 20 * Time.deltaTime);
             anim.SetBool("isWalking", true);
         }
         else anim.SetBool("isWalking", false);

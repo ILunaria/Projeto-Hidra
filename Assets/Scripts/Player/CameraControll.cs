@@ -12,7 +12,7 @@ public class CameraControll : MonoBehaviour
         MouseHide();
         cam = Camera.main.transform;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         CheckRotation();
     }
@@ -31,14 +31,15 @@ public class CameraControll : MonoBehaviour
         Quaternion lookingRotation = cam.rotation;
         lookingRotation.x = 0;
         lookingRotation.z = 0;
+        lookingRotation.w = 0;
 
         if (Quaternion.Angle(body.rotation, lookingRotation) > 75)
         {
-            body.forward = Vector3.Lerp(body.forward, lookDirection, 5f * Time.deltaTime);
+            body.forward = Vector3.Lerp(body.forward, lookDirection, 10f * Time.fixedDeltaTime);
         }
         else if (Quaternion.Angle(body.rotation, lookingRotation) < -75)
         {
-            body.forward = Vector3.Lerp(body.forward, lookDirection, 5f * Time.deltaTime);
+            body.forward = Vector3.Lerp(body.forward, lookDirection, 10f * Time.fixedDeltaTime);
         }
     }
 }
