@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Annotation_01
+  m_EditorClassIdentifier: 
+  paragraphs:
+  - text:
+    - "Durante a investiga\xE7\xE3o, foi descoberto que a empresa tem realizado"
+    type: 0
+  - text:
+    - "experimentos nos animais regionais. Eles s\xE3o sedados e trazidos para c\xE1
+      para horrores absurdos como: coleta de \xF3rg\xE3os, robotifica\xE7\xE3o das
+      partes vivas, coleta de amostras e, em alguns casos, at\xE9 o tr\xE1fico ilegal
+      desses animais. Al\xE9m disso, muitos funcion\xE1rios foram apagados ap\xF3s
+      reclamar dessas condi\xE7\xF5es."
+    - "a\xE7\xF5es com os animais regionais. Eles s\xE3o sedados e trazidos para
+      c\xE1 para tratamento de doen\xE7as possivelmente prejudiciais para a popula\xE7\xE3o
+      como: Covid-37, C\xF3lera drac\xF4nica, Gripe rob\xF3tica, Calvice-1 e Calvice-2,
+      e afins."
+    - "a\xE7\xF5es com os animais regionais. Eles s\xE3o sedados e trazidos para
+      c\xE1 para tratamento de doen\xE7as possivelmente prejudiciais para a popula\xE7\xE3o
+      como: Covid-37, C\xF3lera drac\xF4nica, Gripe rob\xF3tica, Calvice-1 e Calvice-2,
+      e afins. Infelizmente esses tratamentos nunca chegam a popula\xE7\xE3o mais
+      pobre, uma empresa que serve apenas a elite."
+    type: 1
+  - text:
+    - "\nMinha fonte tamb\xE9m informou que a empresa tem"
+    type: 0
+  - text:
+    - "causado danos ambientais significativos em suas opera\xE7\xF5es, poluindo
+      rios e outros corpos de \xE1gua, desmatando grandes \xE1reas de floresta tropical
+      e raptando a fauna local para experimentos hediondos."
+    - "feito um \xF3timo trabalho ambiental, limpando os rios e outros corpos de
+      \xE1gua, reflorestando grande parte da floresta tropical e reabilitando animais
+      quase extintos."
+    - "feito alguns trabalhos ambientais, limpando os rios e outros corpos de \xE1gua,
+      reflorestando a floresta tropical e reabilitando animais regionais. Talvez
+      eles pretendam encobrir algo com essas a\xE7\xF5es, mas n\xE3o encontrei nada."
+    type: 1
