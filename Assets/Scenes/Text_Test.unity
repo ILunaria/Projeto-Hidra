@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: a6451746c776b84409d5756a9b7887eb, type: 2}
-  TypeInfo: 0000000002000000
+  TypeInfo: 0100000001000000
 --- !u!114 &1846679455
 MonoBehaviour:
   m_ObjectHideFlags: 0
