@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxSpeed = 25;
     [SerializeField] private float sprintAddSpeed = 10;
     [SerializeField] private float jumpForce = 1.0f;
-    [SerializeField] private float gravityValue = -9.81f;
     [Range(0.5f,0.999f)][SerializeField] private float breakSmooth = 0.99f;
     #endregion
     #region PLAYER COMPONENTS
