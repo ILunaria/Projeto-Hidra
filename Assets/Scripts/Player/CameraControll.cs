@@ -16,40 +16,41 @@ public class CameraControll : MonoBehaviour
     {
         MouseHide();
     }
+    // Update is called in every frame
     private void Update()
     {
         CheckLookDirection();
         CheckRotation();
     }
-
+    //Esconde o mouse
     private void MouseHide()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+    //Checa a rotação do personagem por dot product e rotaciona ele
     private void CheckRotation()
     {
 
         Vector3 dirToTarget = Vector3.Normalize(mouseWorldPosition - body.position);
-
         float dot = Vector3.Dot(body.forward, dirToTarget);
+
+        Vector3 worldAimTarget = mouseWorldPosition;
+        worldAimTarget.y = body.position.y;
+        Vector3 aimDirection = Vector3.Normalize(worldAimTarget - body.position);
+
 
         //Debug.Log(dot);
 
         if (dot < 0.8 && dot > 0.35)
         {
-            Vector3 worldAimTarget = mouseWorldPosition;
-            worldAimTarget.y = body.position.y;
-            Vector3 aimDirection = Vector3.Normalize(worldAimTarget - body.position);
-            body.forward = Vector3.Lerp(body.forward, aimDirection, 2f * Time.deltaTime);
+            body.forward = Vector3.Lerp(body.forward, aimDirection, 3f * Time.deltaTime);
         }
         else if (dot < 0.35)
         {
-            Vector3 worldAimTarget = mouseWorldPosition;
-            worldAimTarget.y = body.position.y;
-            Vector3 aimDirection = Vector3.Normalize(worldAimTarget - body.position);
-            body.forward = Vector3.Lerp(body.forward, aimDirection, 4f * Time.deltaTime);
+            body.forward = Vector3.Lerp(body.forward, aimDirection, 7f * Time.deltaTime);
         }
     }
+    //Checa a direção que a camera está apontando.
     private void CheckLookDirection()
     {
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
