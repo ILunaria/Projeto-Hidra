@@ -1,33 +1,50 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class FlashLight : MonoBehaviour
 {
+    #region COMPONENTS
     private InputActions inputs;
     private Animator anim;
-    private CameraControll cam;
+    #endregion
 
+    [SerializeField] private float batteryDuration;
+    private float currentBattery;
+    public float CurrenBattery => currentBattery; 
     private bool isOn = false;
+    private bool canUse;
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
-        cam = FindObjectOfType<CameraControll>().GetComponent<CameraControll>();
         anim = GetComponent<Animator>();
         inputs = new InputActions();
 
         inputs.Enable();
         inputs.Player.FlashLight.performed += FlashLight_Input;
+
+        currentBattery = batteryDuration;
     }
     private void Update()
     {
-        
+        if(isOn)
+        {
+            currentBattery -= Time.deltaTime;
+            if(currentBattery < 0)
+            {
+                canUse = false;
+                FlashLightOff();
+            }
+        }
+        if(currentBattery > 0) canUse = true;
+
     }
     private void FlashLight_Input(InputAction.CallbackContext obj)
     {
         Debug.Log(obj);
-        if (isOn) FlashLightOff();
-        else FlashLightOn();
+        if (!isOn && canUse) FlashLightOn();
+        else FlashLightOff();
     }
     private void FlashLightOff()
     {

@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f;
     [SerializeField] private float maxSpeed = 25;
     [SerializeField] private float sprintAddSpeed = 10;
-    [SerializeField] private float jumpForce = 1.0f;
     [Range(0.5f,0.999f)][SerializeField] private float breakSmooth = 0.99f;
     #endregion
     #region PLAYER COMPONENTS
@@ -29,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
-    private void Awake()
+    private void Start()
     {
         inputs = new InputActions();
         rbPlayer = GetComponent<Rigidbody>();
@@ -37,7 +36,6 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         inputs.Enable();
-        inputs.Player.Jump.performed += Jump_Input;
         inputs.Player.Sprint.performed += Sprint_Input;
         inputs.Player.Sprint.canceled += Sprint_Input;
     }
@@ -56,12 +54,6 @@ public class PlayerController : MonoBehaviour
             playerSpeed-= sprintAddSpeed;
             anim.speed -= 1;
         }
-    }
-
-    private void Jump_Input(InputAction.CallbackContext context)
-    {
-        Debug.Log(context);
-        JumpAction();
     }
 
     void Update()
@@ -107,11 +99,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - checkerOffset, transform.position.z);
         isGrounded = Physics.CheckSphere(spherePosition, checkerRadius, ground);
-    }
-
-    private void JumpAction()
-    {
-        if (isGrounded) rbPlayer.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
     private void OnDrawGizmosSelected()

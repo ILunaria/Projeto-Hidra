@@ -12,7 +12,7 @@ public class CameraControll : MonoBehaviour
     public Vector3 MouseWorldPostion => mouseWorldPosition;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         MouseHide();
     }
