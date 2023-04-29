@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180864636184612743}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9168867, z: 0.025000256}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3333333, y: 0.71428573, z: 0.83333325}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 3520988100408986267}
   - component: {fileID: 3520988100408986263}
   - component: {fileID: 3520988100408986269}
+  - component: {fileID: 918924963}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -942,10 +943,10 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 40f9fac91c422a44391abfd16446e1d9, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.42094663
-  m_Height: 1.6914902
+  m_Radius: 0.5
+  m_Height: 1.9088979
   m_Direction: 1
-  m_Center: {x: 0.21002972, y: -0.011940956, z: 0.029762587}
+  m_Center: {x: -0, y: 0.22722396, z: 0}
 --- !u!95 &3520988100408986266
 Animator:
   serializedVersion: 5
@@ -1043,7 +1044,6 @@ MonoBehaviour:
   playerSpeed: 20
   maxSpeed: 25
   sprintAddSpeed: 10
-  jumpForce: 1
   breakSmooth: 0.9
   isGrounded: 0
   checkerOffset: 0.73
@@ -1064,6 +1064,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryDuration: 30
+--- !u!114 &918924963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520988100408986261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c02fe71a3c5d140960d779390aba30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3520988100609744164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3520988100609744164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.42, z: 0}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1112,7 +1124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3520988100936761915
 Transform:
   m_ObjectHideFlags: 0

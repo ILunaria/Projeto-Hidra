@@ -63,6 +63,6 @@ public class CameraControll : MonoBehaviour
         {
             mouseWorldPosition = ray.GetPoint(100);
         }
-        debug.transform.position = mouseWorldPosition;
+        debug.transform.position = Vector3.Lerp(debug.transform.position,mouseWorldPosition,0.1f);
     }
 }
