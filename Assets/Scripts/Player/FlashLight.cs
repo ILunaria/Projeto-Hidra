@@ -42,7 +42,6 @@ public class FlashLight : MonoBehaviour
     }
     private void FlashLight_Input(InputAction.CallbackContext obj)
     {
-        Debug.Log(obj);
         if (!isOn && canUse) FlashLightOn();
         else FlashLightOff();
     }

@@ -13,7 +13,6 @@ public class Interact : MonoBehaviour
     private Animator anim;
     private InputActions inputs;
     #endregion
-    private float holdTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +26,21 @@ public class Interact : MonoBehaviour
     {
         if(CanInteract())
         {
-            CheckInteract();
+            InteractAction_01();
         }
     }
     private void Interact_02_Input(InputAction.CallbackContext obj)
     {
         if (CanInteract())
         {
-            BlockDoor();
+            InteractAction_02();
         }
     }
     private void Update()
     {
         CanInteract();
     }
-    private void CheckInteract()
+    private void InteractAction_01()
     {
         Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange);
 
@@ -49,12 +48,8 @@ public class Interact : MonoBehaviour
         {
             if (col.tag == "Door")
             {
-                anim = col.gameObject.GetComponent<Animator>();
-
-                if (anim.GetBool("Blocked")) return;
-
-                bool isClosed = anim.GetBool("Closed");
-                anim.SetBool("Closed", !isClosed);
+                Interact_Door door = col.gameObject.GetComponent<Interact_Door>();
+                door.CloseDoor();
             }
         }
     }
@@ -78,7 +73,7 @@ public class Interact : MonoBehaviour
         }
         return false;
     }
-    private void BlockDoor()
+    private void InteractAction_02()
     {
         Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange);
 
@@ -86,23 +81,8 @@ public class Interact : MonoBehaviour
         {
             if (col.tag == "Door")
             {
-                anim = col.gameObject.GetComponent<Animator>();
-
-                bool isBlocked = anim.GetBool("Blocked");
-                if (!anim.GetBool("Closed"))
-                {
-                    return;
-                }
-
-                if (anim.GetBool("Closed") && !isBlocked)
-                {
-                    anim.SetBool("Blocked", true);
-                }
-                else if(anim.GetBool("Closed") && isBlocked)
-                {
-                    anim.SetBool("Blocked", false);
-                }
-                
+                Interact_Door door = col.gameObject.GetComponent<Interact_Door>();
+                door.BlockDoor();
             }
         }
     }

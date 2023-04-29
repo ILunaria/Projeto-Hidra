@@ -1516,6 +1516,7 @@ GameObject:
   - component: {fileID: 461063832}
   - component: {fileID: 461063831}
   - component: {fileID: 461063830}
+  - component: {fileID: 461063834}
   m_Layer: 0
   m_Name: Porta
   m_TagString: Door
@@ -1622,6 +1623,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461063828}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &461063834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461063828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874ab5b6b1656884baf022591a098a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &467398910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1238508674159178369, guid: de3c03263da4f494092b8e94dbf37292,
@@ -2092,6 +2105,7 @@ GameObject:
   - component: {fileID: 668940041}
   - component: {fileID: 668940040}
   - component: {fileID: 668940039}
+  - component: {fileID: 668940043}
   m_Layer: 0
   m_Name: Porta
   m_TagString: Door
@@ -2198,6 +2212,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668940037}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668940043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668940037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874ab5b6b1656884baf022591a098a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &674413995
 PrefabInstance:
   m_ObjectHideFlags: 0
