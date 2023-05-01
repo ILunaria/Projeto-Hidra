@@ -16,6 +16,7 @@ public class Interact : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         inputs = new InputActions();
 
         inputs.Enable();
@@ -51,6 +52,10 @@ public class Interact : MonoBehaviour
                 Interact_Door door = col.gameObject.GetComponent<Interact_Door>();
                 door.CloseDoor();
             }
+            if (col.tag == "Recharge")
+            {
+                anim.Play("Recharge");
+            }
         }
     }
     private bool CanInteract()
@@ -60,6 +65,17 @@ public class Interact : MonoBehaviour
         foreach (Collider col in hitColliders)
         {
             if (col.tag == "Door")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
+
+                float dot = Vector3.Dot(this.transform.forward, dirToTarget);
+
+                if (dot > 0.2f)
+                {
+                    return true;
+                }
+            }
+            if (col.tag == "Recharge")
             {
                 Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
 

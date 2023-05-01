@@ -105,4 +105,12 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - checkerOffset, transform.position.z), checkerRadius);
     }
+    private void StopInput()
+    {
+        inputs.Player.Disable();
+    }
+    private void StartInputs()
+    {
+        inputs.Player.Enable();
+    }
 }

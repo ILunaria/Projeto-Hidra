@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Recharge
   layers:
   - Default
   - TransparentFX

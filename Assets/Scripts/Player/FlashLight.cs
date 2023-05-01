@@ -12,8 +12,11 @@ public class FlashLight : MonoBehaviour
 
     [SerializeField] private float batteryDuration;
     private float currentBattery;
+
     public float CurrenBattery => currentBattery; 
+
     private bool isOn = false;
+    private bool isRecharging = false;
     private bool canUse;
     // Start is called before the first frame update
     private void Start()
@@ -28,7 +31,12 @@ public class FlashLight : MonoBehaviour
     }
     private void Update()
     {
-        if(isOn)
+        if (isRecharging)
+        {
+            currentBattery += 10 * Time.deltaTime;
+            return;
+        }
+        if (isOn)
         {
             currentBattery -= Time.deltaTime;
             if(currentBattery < 0)
@@ -38,6 +46,7 @@ public class FlashLight : MonoBehaviour
             }
         }
         if(currentBattery > 0) canUse = true;
+        
 
     }
     private void FlashLight_Input(InputAction.CallbackContext obj)
@@ -54,5 +63,13 @@ public class FlashLight : MonoBehaviour
     {
         anim.Play("FlashOn");
         isOn = true;
+    }
+    private void StartRecharge()
+    {
+        isRecharging = true;
+    }
+    private void StopRecharge()
+    {
+        isRecharging = false;
     }
 }
