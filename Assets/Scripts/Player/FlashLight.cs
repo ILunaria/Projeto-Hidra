@@ -33,7 +33,7 @@ public class FlashLight : MonoBehaviour
     {
         if (isRecharging)
         {
-            currentBattery += 10 * Time.deltaTime;
+            Mathf.Lerp(currentBattery, batteryDuration, 1f);
             return;
         }
         if (isOn)
