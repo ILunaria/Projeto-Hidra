@@ -18,7 +18,7 @@ public class FlashLight : MonoBehaviour
     private bool isOn = false;
     private bool isRecharging = false;
     private bool canUse;
-    // Start is called before the first frame update
+
     private void Start()
     {
         anim = GetComponent<Animator>();

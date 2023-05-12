@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Recharge
+  - Info
   layers:
   - Default
   - TransparentFX

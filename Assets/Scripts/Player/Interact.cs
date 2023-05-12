@@ -56,6 +56,11 @@ public class Interact : MonoBehaviour
             {
                 anim.Play("Recharge");
             }
+            if (col.tag == "Info")
+            {
+                Info_GO inf = col.gameObject.GetComponent<Info_GO>();
+                inf.OnInteract();
+            }
         }
     }
     private bool CanInteract()
@@ -82,6 +87,17 @@ public class Interact : MonoBehaviour
                 float dot = Vector3.Dot(this.transform.forward, dirToTarget);
 
                 if (dot > 0.2f)
+                {
+                    return true;
+                }
+            }
+            if (col.tag == "Info")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
+
+                float dot = Vector3.Dot(this.transform.forward, dirToTarget);
+
+                if (dot > 0.7f)
                 {
                     return true;
                 }

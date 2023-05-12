@@ -1,24 +1,20 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Assets/Annotation",fileName = "Annotation_")]
+[CreateAssetMenu(menuName = "Assets/Info",fileName = "Info_")]
 public class Info_SO : ScriptableObject
 {
-    [SerializeField] private Phrase[] paragraphs;
-    public Phrase[] Paragraphs => paragraphs;
-}
-[Serializable]
-public class Phrase
-{
-    [TextArea(2,10)]
-    [SerializeField] private string[] text;
-    [SerializeField] private PhraseType type;
+    [TextArea(2, 10)]
+    [SerializeField] private string text;
+    [SerializeField] private string index;
+    [SerializeField] private InfoType type;
 
-    public string[] Text => text;
-    public PhraseType Type => type;
+    public string Text => text;
+    public string Index => index;
+    public InfoType Type => type;
 }
-public enum PhraseType
+public enum InfoType
 {
-    ConstantPhrase,
-    InfoPhrase,
+    ConstantInfo,
+    IncostantInfo,
 }
