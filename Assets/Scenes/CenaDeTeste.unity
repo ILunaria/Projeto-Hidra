@@ -2500,7 +2500,7 @@ GameObject:
   - component: {fileID: 1775376760}
   - component: {fileID: 1775376759}
   m_Layer: 5
-  m_Name: Anotar
+  m_Name: Salvar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2806,7 +2806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Anotar
+  m_text: 'Salvar
 
 '
   m_isRightToLeft: 0

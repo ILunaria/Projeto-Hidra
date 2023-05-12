@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
   m_Name: Info_02_F
   m_EditorClassIdentifier: 
+  title: Escadaria
   text: teste de info 02 zero dois agora estou escrevendo algo e vou pra 03
   index: Recep_02
   type: 1

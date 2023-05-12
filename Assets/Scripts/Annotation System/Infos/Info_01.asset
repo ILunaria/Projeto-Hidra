@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
   m_Name: Info_01
   m_EditorClassIdentifier: 
+  title: "Recep\xE7\xE3o"
   text: "Teste de info, recep\xE7\xE3o est\xE1 aqui ou n\xE3o"
   index: Recep_01
   type: 0
