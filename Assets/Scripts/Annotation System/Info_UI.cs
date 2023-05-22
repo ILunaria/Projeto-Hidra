@@ -18,24 +18,27 @@ public class Info_UI : MonoBehaviour
 
         inventory.Set_SameInfo(SameInfo);
     }
-    public void SetText(Info_SO info, GameObject obj)
+    public void OpenInfo(Info_SO info, GameObject obj)
     {
         GO = obj;
         infoUI.SetActive(true);
         text.SetText(info.Text);
 
+        GameManager.SetPaused(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.Confined;
     }
     private void SameInfo()
     {
         popUp.SetActive(true);
+        GameManager.SetPaused(true);
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.Confined;
     }
     public void DestroyInfo()
     {
         Destroy(GO);
+        GameManager.SetPaused(false);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
     }

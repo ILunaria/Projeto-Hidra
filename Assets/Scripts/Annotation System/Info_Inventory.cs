@@ -5,6 +5,8 @@ using UnityEngine;
 public class Info_Inventory : MonoBehaviour
 {
     [SerializeField] private List<Info_SO> infos = new List<Info_SO>();
+    public List<Info_SO> Infos => infos;
+
     private Info_SO CurrentInfo;
 
     public delegate void SameInfo();
@@ -48,6 +50,9 @@ public class Info_Inventory : MonoBehaviour
                 infos[i] = CurrentInfo;
             }
         }
+        GameManager.SetPaused(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
     }
     public void Set_SameInfo(SameInfo dele)
     {
