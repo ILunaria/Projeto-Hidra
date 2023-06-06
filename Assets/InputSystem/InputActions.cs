@@ -80,6 +80,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Annotations"",
+                    ""type"": ""Button"",
+                    ""id"": ""9389a799-2cef-4109-ac97-20375a62019b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Interact_02"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2aa858cd-07fa-486d-9471-b67e7726f493"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Annotations"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_FlashLight = m_Player.FindAction("Flash Light", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Interact_02 = m_Player.FindAction("Interact_02", throwIfNotFound: true);
+        m_Player_Annotations = m_Player.FindAction("Annotations", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,6 +294,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_FlashLight;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Interact_02;
+    private readonly InputAction m_Player_Annotations;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -283,6 +305,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @FlashLight => m_Wrapper.m_Player_FlashLight;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Interact_02 => m_Wrapper.m_Player_Interact_02;
+        public InputAction @Annotations => m_Wrapper.m_Player_Annotations;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +333,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Interact_02.started += instance.OnInteract_02;
             @Interact_02.performed += instance.OnInteract_02;
             @Interact_02.canceled += instance.OnInteract_02;
+            @Annotations.started += instance.OnAnnotations;
+            @Annotations.performed += instance.OnAnnotations;
+            @Annotations.canceled += instance.OnAnnotations;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -332,6 +358,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Interact_02.started -= instance.OnInteract_02;
             @Interact_02.performed -= instance.OnInteract_02;
             @Interact_02.canceled -= instance.OnInteract_02;
+            @Annotations.started -= instance.OnAnnotations;
+            @Annotations.performed -= instance.OnAnnotations;
+            @Annotations.canceled -= instance.OnAnnotations;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -357,5 +386,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnFlashLight(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract_02(InputAction.CallbackContext context);
+        void OnAnnotations(InputAction.CallbackContext context);
     }
 }
