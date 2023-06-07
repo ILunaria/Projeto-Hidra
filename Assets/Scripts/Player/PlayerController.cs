@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = inputs.Player.Movement.ReadValue<Vector2>();
+        anim.SetFloat("MoveX", moveDirection.x);
+        anim.SetFloat("MoveZ", moveDirection.y);
         GroundCheck();
     }
 
