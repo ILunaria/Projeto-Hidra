@@ -56,12 +56,12 @@ public class FlashLight : MonoBehaviour
     }
     private void FlashLightOff()
     {
-        anim.Play("FlashOff");
+        anim.CrossFade("Lantern_Off", 1f,1);
         isOn = false;
     }
     private void FlashLightOn()
     {
-        anim.Play("FlashOn");
+        anim.CrossFade("Lantern_On", 1f,1);
         isOn = true;
     }
     private void StartRecharge()

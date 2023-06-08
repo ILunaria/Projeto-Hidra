@@ -17,7 +17,13 @@ public class PlayerController : MonoBehaviour
     private Transform cameraTransform;
     private Vector2 moveDirection;
     #endregion
-
+    #region ANIMATION
+    [Header("Animation Vars")]
+    private Animator anim;
+    private Vector2 currentAnimBlend;
+    private Vector2 animationVelocity;
+    [SerializeField] private float smoothTime;
+    #endregion
     #region GROUNDED
     [Header("Player Ground")]
     [SerializeField] private bool isGrounded;
@@ -26,7 +32,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask ground;
     #endregion
 
-    private Animator anim;
 
     private void Start()
     {
@@ -59,8 +64,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = inputs.Player.Movement.ReadValue<Vector2>();
-        anim.SetFloat("MoveX", moveDirection.x);
-        anim.SetFloat("MoveZ", moveDirection.y);
+
         GroundCheck();
     }
 
@@ -71,7 +75,11 @@ public class PlayerController : MonoBehaviour
 
     private void MoveAction()
     {
-        Vector3 move = new Vector3(moveDirection.x, 0, moveDirection.y);
+        currentAnimBlend = Vector2.SmoothDamp(currentAnimBlend,moveDirection, ref animationVelocity, smoothTime);
+        Vector3 move = new Vector3(currentAnimBlend.x, 0, currentAnimBlend.y);
+
+        anim.SetFloat("MoveX", currentAnimBlend.x);
+        anim.SetFloat("MoveZ", currentAnimBlend.y);
 
         move = cameraTransform.forward * move.z + cameraTransform.right * move.x;
         float origMagnitude = move.magnitude;
@@ -85,9 +93,7 @@ public class PlayerController : MonoBehaviour
         if (move != Vector3.zero)
         {
             transform.forward = Vector3.Lerp(transform.forward, lookDirection, 20 * Time.deltaTime);
-            anim.SetBool("isWalking", true);
         }
-        else anim.SetBool("isWalking", false);
 
         if (rbPlayer.velocity.sqrMagnitude > maxSpeed)
         {
