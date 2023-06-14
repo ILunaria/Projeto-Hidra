@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Interact : MonoBehaviour
 {
     #region CHECKERS
-    private float checkRange = 3f;
+    private float checkRange = 5f;
     private LayerMask interactMask;
     #endregion
     #region COMPONENTS
