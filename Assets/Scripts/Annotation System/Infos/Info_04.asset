@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Info_04
+  m_EditorClassIdentifier: 
+  title: "4\xAA Anota\xE7\xE3o"
+  text: "\u201CCENPA Coleta DNA de Titanoboa em Busca da Imortalidade\"\n\nUma cobra
+    gigante, anteriormente desconhecida e identificada como Titanoboa cerrejonensis,
+    teve seu DNA coletado em um projeto sinistro. Alega-se que esse projeto tem como
+    objetivo alcan\xE7ar a imortalidade, supostamente sob as ordens do filho do presidente..\r\n\r\nDiante
+    dessa revela\xE7\xE3o, \xE9 essencial que investiga\xE7\xF5es independentes sejam
+    lan\xE7adas para verificar essas informa\xE7\xF5es e avaliar as implica\xE7\xF5es
+    \xE9ticas e legais desse projeto. A busca pela imortalidade atrav\xE9s da manipula\xE7\xE3o
+    gen\xE9tica \xE9 altamente controversa e requer discuss\xF5es honestas e abertas.\n\n\xC9
+    crucial garantir que a ci\xEAncia seja conduzida dentro de limites \xE9ticos,
+    a fim de evitar consequ\xEAncias desastrosas e proteger a integridade da pesquisa
+    cient\xEDfica.\r"
+  index: "Anota\xE7\xE3o 4"
+  type: 0

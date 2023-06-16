@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Info_02_B
+  m_EditorClassIdentifier: 
+  title: "2\xAA Anota\xE7\xE3o"
+  text: "\u201CM\xE9dico Respons\xE1vel por Avalia\xE7\xE3o de Animais Suspeito de
+    Roubo de Sedativos\"\n\nA reputa\xE7\xE3o do Centro Nacional de Prote\xE7\xE3o
+    Animal (CENPA) foi abalada por um esc\xE2ndalo recente. Foi descoberto que um
+    m\xE9dico interno est\xE1 suspeito de roubar sedativos usados nos exames dos
+    animais coletados. Isso levanta preocupa\xE7\xF5es sobre a \xE9tica da organiza\xE7\xE3o
+    e sugere poss\xEDveis problemas salariais entre os funcion\xE1rios.\r\n\r\nO
+    m\xE9dico em quest\xE3o \xE9 respons\xE1vel por examinar os animais logo ap\xF3s
+    sua coleta, o que o coloca como principal suspeito devido \xE0 sua proximidade
+    com as subst\xE2ncias desviadas. O desaparecimento dos sedativos compromete o
+    cuidado adequado dos animais, afetando a precis\xE3o dos exames e colocando em
+    risco sua sa\xFAde e bem-estar.\n\nEssa situa\xE7\xE3o levanta quest\xF5es sobre
+    as pol\xEDticas de remunera\xE7\xE3o do CENPA e se os funcion\xE1rios est\xE3o
+    recebendo uma compensa\xE7\xE3o justa por seu trabalho.\r"
+  index: "Anota\xE7\xE3o 2"
+  type: 1

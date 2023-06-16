@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Info_02_A
+  m_EditorClassIdentifier: 
+  title: "2\xAA Anota\xE7\xE3o"
+  text: "\u201CDoutor Gabriel Santana Suspeito de Roubo de Sedativos e Morto em Circunst\xE2ncias
+    Misteriosas\"\n\nUm esc\xE2ndalo chocante abalou o Centro Nacional de Prote\xE7\xE3o
+    Animal (CENPA). O m\xE9dico Gabriel Santana, acusado de roubar sedativos, foi
+    encontrado morto em circunst\xE2ncias ainda n\xE3o esclarecidas. Sua participa\xE7\xE3o
+    no desvio de sedativos, aparentemente para uso pessoal, levanta preocupa\xE7\xF5es
+    sobre poss\xEDveis problemas de v\xEDcio e questiona as pr\xE1ticas \xE9ticas
+    da organiza\xE7\xE3o.\r\n\r\nEsse incidente levanta quest\xF5es sobre a seguran\xE7a
+    e a supervis\xE3o no CENPA, destacando a import\xE2ncia de uma investiga\xE7\xE3o
+    minuciosa para esclarecer as circunst\xE2ncias da morte do m\xE9dico e garantir
+    a responsabiliza\xE7\xE3o adequada. Al\xE9m disso, destaca a necessidade de vigil\xE2ncia
+    constante no ambiente de trabalho, especialmente quando se trata de subst\xE2ncias
+    sens\xEDveis, e a implementa\xE7\xE3o de pol\xEDticas de apoio \xE0 sa\xFAde
+    mental dos funcion\xE1rios, a fim de evitar trag\xE9dias semelhantes no futuro\r."
+  index: "Anota\xE7\xE3o 2"
+  type: 1

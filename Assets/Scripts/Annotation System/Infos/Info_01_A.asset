@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
   m_Name: Info_01_A
   m_EditorClassIdentifier: 
-  title: "Anota\xE7\xE3o 1"
-  text: "\u201CHabilidade Excepcional da CENPA na Gest\xE3o de Animais\u201D\r\n\r\nH\xE1
+  title: "1\xAA Anota\xE7\xE3o"
+  text: "\u201CHabilidade Excepcional da CENPA na Gest\xE3o de Animais\u201D \n\nH\xE1
     algo estranho acontecendo com o Centro Nacional de Prote\xE7\xE3o Animal (CENPA).
     Eles s\xE3o incrivelmente bons em lidar com os animais, at\xE9 melhores do que
     algumas ONGs dedicadas a proteg\xEA-los. Isso levanta suspeitas sobre suas verdadeiras
@@ -21,7 +21,7 @@ MonoBehaviour:
     ilegal de animais ou experimentos obscuros?\r\n\r\nEssas suspeitas lan\xE7am
     d\xFAvidas sobre a reputa\xE7\xE3o da CENPA e levantam preocupa\xE7\xF5es sobre
     sua verdadeira miss\xE3o. Precisamos exigir transpar\xEAncia e responsabilidade
-    da organiza\xE7\xE3o. Os animais n\xE3o devem ser sacrificados em nome de ganhos
-    obscuros.\u201D\r"
+    da organiza\xE7\xE3o.\n\nOs animais n\xE3o devem ser sacrificados em nome de
+    ganhos obscuros."
   index: "Anota\xE7\xE3o 1"
   type: 1
