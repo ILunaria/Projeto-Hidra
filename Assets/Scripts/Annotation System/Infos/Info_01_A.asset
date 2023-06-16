@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Info_01_A
+  m_EditorClassIdentifier: 
+  title: "Anota\xE7\xE3o 1"
+  text: "\u201CHabilidade Excepcional da CENPA na Gest\xE3o de Animais\u201D\r\n\r\nH\xE1
+    algo estranho acontecendo com o Centro Nacional de Prote\xE7\xE3o Animal (CENPA).
+    Eles s\xE3o incrivelmente bons em lidar com os animais, at\xE9 melhores do que
+    algumas ONGs dedicadas a proteg\xEA-los. Isso levanta suspeitas sobre suas verdadeiras
+    inten\xE7\xF5es. Ser\xE1 que eles t\xEAm interesses ocultos, como o com\xE9rcio
+    ilegal de animais ou experimentos obscuros?\r\n\r\nEssas suspeitas lan\xE7am
+    d\xFAvidas sobre a reputa\xE7\xE3o da CENPA e levantam preocupa\xE7\xF5es sobre
+    sua verdadeira miss\xE3o. Precisamos exigir transpar\xEAncia e responsabilidade
+    da organiza\xE7\xE3o. Os animais n\xE3o devem ser sacrificados em nome de ganhos
+    obscuros.\u201D\r"
+  index: "Anota\xE7\xE3o 1"
+  type: 1

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8160311185487501981}
   - component: {fileID: 2026596544680470621}
   - component: {fileID: 8161729806339206804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBox)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3874277959786684725}
   - component: {fileID: 3625563345825207801}
   - component: {fileID: 7430762165714129844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxBT4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850606458892070788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBox)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4733274533389185612}
   - component: {fileID: 1722248312824715070}
   - component: {fileID: 3139320989609937030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxBT5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 8043661754556113651}
   - component: {fileID: 1260647646210259552}
   - component: {fileID: 4577374372589455522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxBT2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 5329779308033379228}
   - component: {fileID: 4782894097898334788}
   - component: {fileID: 1974001626894672206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxBT1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 6087802904102308301}
   - component: {fileID: 4201204905774257771}
   - component: {fileID: 7221701343187457007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxBT3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 7908873493256368780}
   - component: {fileID: 8885411564367127628}
   - component: {fileID: 7792890268984742704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_PROP_(PowerBoxLid)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

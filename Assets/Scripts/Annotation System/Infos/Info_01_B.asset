@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6186d0f68c1f8a4bb9fe6ee083fb429, type: 3}
+  m_Name: Info_01_B
+  m_EditorClassIdentifier: 
+  title: "Anota\xE7\xE3o 1"
+  text: "\u201CCondi\xE7\xF5es Desumanas de Cativeiro na CENPA\u201D\r\n\r\nHoje,
+    descobri algo terr\xEDvel sobre o Centro Nacional de Prote\xE7\xE3o Animal (CENPA).
+    Os animais l\xE1 s\xE3o mantidos em condi\xE7\xF5es horr\xEDveis, presos em jaulas
+    pequenas, sem a chance de viverem livremente. \xC9 triste ver le\xF5es, macacos
+    e esp\xE9cies do Pantanal sofrendo tanto. A realidade \xE9 completamente oposta
+    ao que a CENPA diz representar. Precisamos fazer algo para acabar com esse sofrimento
+    e garantir um tratamento digno para esses animais.\u201D\r\n"
+  index: "Anota\xE7\xE3o 1"
+  type: 1

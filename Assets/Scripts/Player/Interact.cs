@@ -6,18 +6,20 @@ using UnityEngine.InputSystem;
 public class Interact : MonoBehaviour
 {
     #region CHECKERS
-    private float checkRange = 5f;
-    private LayerMask interactMask;
+    [SerializeField] private float checkRange = 2f;
+    [SerializeField] private LayerMask interactMask;
     #endregion
     #region COMPONENTS
     private Animator anim;
     private InputActions inputs;
     #endregion
+    private Transform cameraTrans;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         inputs = new InputActions();
+        cameraTrans = Camera.main.transform;
 
         inputs.Enable();
         inputs.Player.Interact.performed += Interact_Input;
@@ -43,7 +45,7 @@ public class Interact : MonoBehaviour
     }
     private void InteractAction_01()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange);
+        Collider[] hitColliders = Physics.OverlapSphere(cameraTrans.position, checkRange, interactMask);
 
         foreach (Collider col in hitColliders)
         {
@@ -65,13 +67,13 @@ public class Interact : MonoBehaviour
     }
     private bool CanInteract()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange);
+        Collider[] hitColliders = Physics.OverlapSphere(cameraTrans.position, checkRange, interactMask);
 
         foreach (Collider col in hitColliders)
         {
             if (col.tag == "Door")
             {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
 
                 float dot = Vector3.Dot(this.transform.forward, dirToTarget);
 
@@ -82,7 +84,7 @@ public class Interact : MonoBehaviour
             }
             if (col.tag == "Recharge")
             {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
 
                 float dot = Vector3.Dot(this.transform.forward, dirToTarget);
 
@@ -93,7 +95,7 @@ public class Interact : MonoBehaviour
             }
             if (col.tag == "Info")
             {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - this.transform.position);
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
 
                 float dot = Vector3.Dot(this.transform.forward, dirToTarget);
 
@@ -107,7 +109,7 @@ public class Interact : MonoBehaviour
     }
     private void InteractAction_02()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange);
+        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange, interactMask);
 
         foreach (Collider col in hitColliders)
         {
@@ -117,5 +119,10 @@ public class Interact : MonoBehaviour
                 door.BlockDoor();
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, checkRange);
+        
     }
 }

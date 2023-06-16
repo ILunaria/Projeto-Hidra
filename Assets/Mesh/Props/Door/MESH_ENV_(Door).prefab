@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1039340702705150175}
   - component: {fileID: 8023123504184594100}
   - component: {fileID: 4485203937951910909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_ENV_(DoorFrame)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 6282013736507327873}
   - component: {fileID: 7634719180050227529}
   - component: {fileID: 2093054830244521862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_ENV_(Door)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7824437848277702924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MESH_ENV_(Door)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
