@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1532649125895850461}
   - component: {fileID: 2516047467130832504}
   - component: {fileID: 364295272761275058}
+  - component: {fileID: 6267636643985522550}
   m_Layer: 0
   m_Name: MESH_PROP_(AnimalCage_Damaged)
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6267636643985522550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165880603019678567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.220001, y: 3, z: 3.0200012}
+  m_Center: {x: 0.00000005960466, y: 1.5, z: -0.00000005960466}

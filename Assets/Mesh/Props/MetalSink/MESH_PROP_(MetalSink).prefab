@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2796434469241633907}
   - component: {fileID: 1252341270920115158}
   - component: {fileID: 3928760146919016220}
+  - component: {fileID: 4359256792775976450}
   m_Layer: 0
   m_Name: MESH_PROP_(MetalSink)
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4359256792775976450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3280097146845423305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6499997, y: 1.2, z: 1.025}
+  m_Center: {x: -0.631, y: -0.3749999, z: -0.13949998}

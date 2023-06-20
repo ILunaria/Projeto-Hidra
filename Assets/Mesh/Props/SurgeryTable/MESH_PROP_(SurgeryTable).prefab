@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7739925602690437307}
   - component: {fileID: 6685143700393139998}
   - component: {fileID: 8872814260385704916}
+  - component: {fileID: 7704976100177853470}
   m_Layer: 0
   m_Name: MESH_PROP_(SurgeryTable)
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7704976100177853470
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6927220120760666625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5454147, y: 2.1509144, z: 1.1861153}
+  m_Center: {x: 0.08076831, y: 1.075457, z: 0.000000059604645}

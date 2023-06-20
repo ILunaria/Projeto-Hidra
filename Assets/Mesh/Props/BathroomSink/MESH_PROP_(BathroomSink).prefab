@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2289661419241200232}
   - component: {fileID: 2911957009153054157}
   - component: {fileID: 1120743409134739719}
+  - component: {fileID: 6128653014120789765}
   m_Layer: 0
   m_Name: MESH_PROP_(BathroomSink)
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6128653014120789765
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480930293337129170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3496487697293455308, guid: cfa2839b5e4f75940bad741a60d7e78e, type: 3}
