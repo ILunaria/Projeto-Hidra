@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 36f56ce553f723e409e2d4cee1e5f1f5
+  m_OcclusionCullingData: {fileID: 36300000, guid: 8e80417f53858e240bf3fcb3ad6b14aa,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -10986,21 +10987,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3504166421798370786, guid: fd6349b1748d7094a9a24be630a2ed67,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3504166421798370786, guid: fd6349b1748d7094a9a24be630a2ed67,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3504166421798370786, guid: fd6349b1748d7094a9a24be630a2ed67,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3504166421798370786, guid: fd6349b1748d7094a9a24be630a2ed67,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.62
       objectReference: {fileID: 0}
@@ -11048,11 +11034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3504166421798370786, guid: fd6349b1748d7094a9a24be630a2ed67,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4317435163003119448, guid: fd6349b1748d7094a9a24be630a2ed67,
         type: 3}
@@ -13277,21 +13258,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4476698782374431452, guid: b634e21ba8333d844a65e06799e8a9bc,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4476698782374431452, guid: b634e21ba8333d844a65e06799e8a9bc,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4476698782374431452, guid: b634e21ba8333d844a65e06799e8a9bc,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4476698782374431452, guid: b634e21ba8333d844a65e06799e8a9bc,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.846
       objectReference: {fileID: 0}
@@ -13339,11 +13305,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4476698782374431452, guid: b634e21ba8333d844a65e06799e8a9bc,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b634e21ba8333d844a65e06799e8a9bc, type: 3}
@@ -38739,7 +38700,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &1521893528980386506
 GameObject:
@@ -38759,7 +38720,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &2093054829760416333
 MonoBehaviour:
