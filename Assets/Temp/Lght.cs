@@ -6,6 +6,7 @@ public class Lght : MonoBehaviour
 {
     float timer = 5;
     Animator anim;
+    private bool isBroken = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,12 +14,21 @@ public class Lght : MonoBehaviour
     }
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if(timer < 0)
+        if (!isBroken) 
         {
-            int x = Random.Range(1, 10);
-            if(x > 6) { anim.Play("LightOff"); }
-            timer = 5;
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                int x = Random.Range(1, 20);
+                if (x > 15) { anim.Play("LightOff"); }
+                timer = 5;
+            }
         }
+        
+    }
+    public void LightExplode()
+    {
+        anim.Play("LightsExplosion");
+        isBroken = true;
     }
 }

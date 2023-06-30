@@ -1,22 +1,23 @@
 using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class FlashLight : MonoBehaviour
 {
     #region COMPONENTS
     private InputActions inputs;
     private Animator anim;
+    [SerializeField] private Slider batteryBar;
     #endregion
 
     [SerializeField] private float batteryDuration;
     private float currentBattery;
 
-    public float CurrenBattery => currentBattery; 
-
     private bool isOn = false;
-    private bool isRecharging = false;
     private bool canUse;
 
     private void Start()
@@ -28,14 +29,11 @@ public class FlashLight : MonoBehaviour
         inputs.Player.FlashLight.performed += FlashLight_Input;
 
         currentBattery = batteryDuration;
+        batteryBar.maxValue = batteryDuration;
     }
     private void Update()
     {
-        if (isRecharging)
-        {
-            Mathf.Lerp(currentBattery, batteryDuration, 1f);
-            return;
-        }
+        if (GameManager.isPaused) return;
         if (isOn)
         {
             currentBattery -= Time.deltaTime;
@@ -46,11 +44,12 @@ public class FlashLight : MonoBehaviour
             }
         }
         if(currentBattery > 0) canUse = true;
-        
 
+        batteryBar.value = currentBattery;
     }
     private void FlashLight_Input(InputAction.CallbackContext obj)
     {
+        if (GameManager.isPaused) return;
         if (!isOn && canUse) FlashLightOn();
         else FlashLightOff();
     }
@@ -64,12 +63,21 @@ public class FlashLight : MonoBehaviour
         anim.CrossFade("Lantern_On", 1f,1);
         isOn = true;
     }
-    private void StartRecharge()
+    public void StartRecharge()
     {
-        isRecharging = true;
+        FlashLightOff();
+        GameManager.SetPaused(true);
+
+        StartCoroutine(Recharge());
+
+        StopRecharge();
     }
-    private void StopRecharge()
+    public void StopRecharge()
     {
-        isRecharging = false;
+        GameManager.SetPaused(false);
+    }
+    IEnumerator Recharge()
+    {
+        yield return new WaitForSeconds(5);
     }
 }

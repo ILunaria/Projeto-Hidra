@@ -1070,7 +1070,7 @@ Rigidbody:
   m_GameObject: {fileID: 3520988100408986261}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.2
+  m_Drag: 0.35
   m_AngularDrag: 0.2
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1230,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439c4822a72ecd24e8f04fdda72ea441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryBar: {fileID: 0}
   batteryDuration: 30
 --- !u!114 &918924963
 MonoBehaviour:
@@ -1243,10 +1244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c02fe71a3c5d140960d779390aba30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRange: 2.5
+  checkRange: 1.5
   interactMask:
     serializedVersion: 2
     m_Bits: 64
+  interactIcon: {fileID: 0}
 --- !u!1 &3520988100609744164
 GameObject:
   m_ObjectHideFlags: 0

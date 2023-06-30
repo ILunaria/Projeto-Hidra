@@ -12,12 +12,15 @@ public class Interact : MonoBehaviour
     #region COMPONENTS
     private Animator anim;
     private InputActions inputs;
+    private FlashLight flight;
     #endregion
     private Transform cameraTrans;
+    [SerializeField] private GameObject interactIcon;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        flight = GetComponent<FlashLight>();
         inputs = new InputActions();
         cameraTrans = Camera.main.transform;
 
@@ -42,6 +45,61 @@ public class Interact : MonoBehaviour
     private void Update()
     {
         CanInteract();
+        if (CanInteract()) { interactIcon.SetActive(true); }
+        else { interactIcon.SetActive(false); }
+    }
+    private bool CanInteract()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(cameraTrans.position, checkRange, interactMask);
+
+        foreach (Collider col in hitColliders)
+        {
+            if (col.tag == "Door")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
+
+                float dot = Vector3.Dot(cameraTrans.forward, dirToTarget);
+
+                if (dot > 0.5f)
+                {
+                    return true;
+                }
+            }
+            if (col.tag == "Recharge")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
+
+                float dot = Vector3.Dot(cameraTrans.forward, dirToTarget);
+
+                if (dot > 0.5f)
+                {
+                    return true;
+                }
+            }
+            if (col.tag == "Info")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
+
+                float dot = Vector3.Dot(cameraTrans.forward, dirToTarget);
+
+                if (dot > 0.95f)
+                {
+                    return true;
+                }
+            }
+            if (col.tag == "Recharge")
+            {
+                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
+
+                float dot = Vector3.Dot(cameraTrans.forward, dirToTarget);
+
+                if (dot > 0.5f)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     private void InteractAction_01()
     {
@@ -54,62 +112,20 @@ public class Interact : MonoBehaviour
                 Interact_Door door = col.gameObject.GetComponent<Interact_Door>();
                 door.CloseDoor();
             }
-            if (col.tag == "Recharge")
-            {
-                anim.Play("Recharge");
-            }
             if (col.tag == "Info")
             {
                 Info_GO inf = col.gameObject.GetComponent<Info_GO>();
                 inf.OnInteract();
             }
-        }
-    }
-    private bool CanInteract()
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(cameraTrans.position, checkRange, interactMask);
-
-        foreach (Collider col in hitColliders)
-        {
-            if (col.tag == "Door")
-            {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
-
-                float dot = Vector3.Dot(this.transform.forward, dirToTarget);
-
-                if (dot > 0.2f)
-                {
-                    return true;
-                }
-            }
             if (col.tag == "Recharge")
             {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
-
-                float dot = Vector3.Dot(this.transform.forward, dirToTarget);
-
-                if (dot > 0.2f)
-                {
-                    return true;
-                }
-            }
-            if (col.tag == "Info")
-            {
-                Vector3 dirToTarget = Vector3.Normalize(col.transform.position - cameraTrans.position);
-
-                float dot = Vector3.Dot(this.transform.forward, dirToTarget);
-
-                if (dot > 0.7f)
-                {
-                    return true;
-                }
+                flight.StartRecharge();
             }
         }
-        return false;
     }
     private void InteractAction_02()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, checkRange, interactMask);
+        Collider[] hitColliders = Physics.OverlapSphere(cameraTrans.position, checkRange, interactMask);
 
         foreach (Collider col in hitColliders)
         {

@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private void Sprint_Input(InputAction.CallbackContext obj)
     {
+        if(GameManager.isPaused) { return; }
         if(obj.performed)
         {
             maxSpeed += sprintAddSpeed;
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.isPaused) { return; }
         moveDirection = inputs.Player.Movement.ReadValue<Vector2>();
 
         GroundCheck();
